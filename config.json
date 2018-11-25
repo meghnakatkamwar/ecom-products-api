@@ -1,0 +1,9 @@
+{
+    "db": {
+        "host": "sql12.freemysqlhosting.net",
+        "db_name": "sql12267000",
+        "username": "sql12267000",
+        "password": "ZBQD1WNz3q",
+        "port": 3306
+    }
+}
