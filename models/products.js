@@ -11,12 +11,12 @@ module.exports = function(sequelize, DataTypes) {
     },
     name: {
       type: DataTypes.STRING(45),
-      allowNull: true,
+      allowNull: false,
       field: 'name'
     },
     price: {
       type: DataTypes.FLOAT,
-      allowNull: true,
+      allowNull: false,
       field: 'price'
     },
     description: {
@@ -29,15 +29,15 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: true,
       field: 'images'
     },
-    created: {
+    createdAt: {
       type: DataTypes.DATE,
       allowNull: true,
-      field: 'created'
+      field: 'createdAt'
     },
-    updated: {
+    updatedAt: {
       type: DataTypes.DATE,
       allowNull: true,
-      field: 'updated'
+      field: 'updatedAt'
     }
   }, {
     tableName: 'products'

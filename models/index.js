@@ -22,8 +22,11 @@ const sequelize = new Sequelize(dbConfig.db_name, dbConfig.username, dbConfig.pa
 // }).catch(err => {
 //     console.log("error ", err)
 // })
+const UserModel = userSchema(sequelize, Sequelize);
+const ProductModel = productSchema(sequelize, Sequelize)
 
-
-export const UserModel = userSchema(sequelize, Sequelize);
-export const ProductModel = productSchema(sequelize, Sequelize)
+module.exports = {
+    UserModel,
+    ProductModel
+}
 
