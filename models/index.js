@@ -1,5 +1,7 @@
 const Sequelize = require('sequelize')
 const config = require('../config.json')
+const userSchema = require('./user')
+const productSchema = require('./products')
 
 const dbConfig = config.db
 const sequelize = new Sequelize(dbConfig.db_name, dbConfig.username, dbConfig.password, {
@@ -22,5 +24,6 @@ const sequelize = new Sequelize(dbConfig.db_name, dbConfig.username, dbConfig.pa
 // })
 
 
-//export const UserModel = userSchema(sequelize, Sequelize);
+export const UserModel = userSchema(sequelize, Sequelize);
+export const ProductModel = productSchema(sequelize, Sequelize)
 
